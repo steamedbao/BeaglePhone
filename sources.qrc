@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/icons/png/home">
+        <file>Icons/home.png</file>
+    </qresource>
+    <qresource prefix="/icons/png/settings">
+        <file>Icons/gears.png</file>
+    </qresource>
+    <qresource prefix="/icons/png/power">
+        <file>Icons/power.png</file>
+    </qresource>
+    <qresource prefix="/icons/png/phone">
+        <file>Icons/phone.png</file>
+    </qresource>
+    <qresource prefix="/icons/png/message">
+        <file>Icons/msg.png</file>
+    </qresource>
+    <qresource prefix="/icons/png/backspace">
+        <file>Icons/backspace.png</file>
+    </qresource>
+    <qresource prefix="/icons/png/dialer">
+        <file>Icons/contacs.png</file>
+        <file>Icons/recentCalls.png</file>
+    </qresource>
+    <qresource prefix="/icons/TI">
+        <file>Icons/Banner.PNG</file>
+        <file>Icons/ti_hz_1c_pos_rgb_png.png</file>
+        <file>Icons/ti_hz_2c_pos_rgb_png.png</file>
+        <file>Icons/stacked.png</file>
+        <file>Icons/beagle.png</file>
+        <file>Icons/beagleLong.png</file>
+    </qresource>
+</RCC>
