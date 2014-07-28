@@ -1,10 +1,11 @@
 #include "dialer.h"
 #include "ui_dialer.h"
 #include <QList>
+#include <iostream>
 
-Dialer::Dialer(QWidget *parent) :
+Dialer::Dialer(QWidget *parent, Serial *serial) :
     QWidget(parent), numberToCall(""),
-    ui(new Ui::Dialer)
+    ui(new Ui::Dialer), serial(serial)
 {
     ui->setupUi(this);
     createConnections();
@@ -17,6 +18,7 @@ void Dialer::createConnections()
     {
         connect(pushButtons[i], SIGNAL(clicked()), this, SLOT(onButtonClicked()));
     }
+
 }
 void Dialer::onButtonClicked()
 {
@@ -42,15 +44,14 @@ void Dialer::onButtonClicked()
     else if ("phoneButton" == caller->objectName() || "backSpaceButton" == caller->objectName())
     {
        if("phoneButton" == caller->objectName())
-           makeCall();
+       {
+           serial->makeCall(numberToCall);
+           return;
+       }
        else if("backSpaceButton" == caller->objectName())
            numberToCall.chop(1);
     }
     ui->lineEdit->setText(numberToCall);
-}
-void Dialer::makeCall()
-{
-
 }
 
 Dialer::~Dialer()

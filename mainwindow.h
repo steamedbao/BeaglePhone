@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "serial.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +21,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    Serial* getSerial();
 
 private:
     Ui::MainWindow *ui;
@@ -28,6 +30,8 @@ private:
     TextThread *textThread;
     TextHome *textHome;
     Power *power;
+    Serial *serial;
+
     int currentIndex;
     int previousIndex;
 

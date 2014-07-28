@@ -7,6 +7,8 @@
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+CONFIG += qesp_linux_udev
+include(Serial/qextserialport/src/qextserialport.pri)
 
 TARGET = BeaglePhoneBlack
     target.files = BeaglePhoneBlack
@@ -22,14 +24,16 @@ SOURCES += main.cpp\
     homepage.cpp \
     textthread.cpp \
     texthome.cpp \
-    power.cpp
+    power.cpp \
+    serial.cpp
 
 HEADERS  += mainwindow.h \
     dialer.h \
     homepage.h \
     textthread.h \
     texthome.h \
-    power.h
+    power.h \
+    serial.h
 
 FORMS    += mainwindow.ui \
     dialer.ui \

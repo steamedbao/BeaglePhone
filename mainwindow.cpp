@@ -17,8 +17,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    serial = new Serial(this);
     homePage = new HomePage(this);
-    dialer = new Dialer(this);
+    dialer = new Dialer(this, serial);
     textHome = new TextHome(this);
     power = new Power (this);
     ui->stackedWidget->addWidget(homePage);
@@ -28,6 +29,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->stackedWidget->setCurrentIndex(0);
     createConnections();
     QTimer::singleShot(1000, this, SLOT(showFullScreen()));
+
+
 
 }
 void MainWindow::createConnections()
@@ -70,7 +73,10 @@ void MainWindow::goToPrevious()
     ui->stackedWidget->setCurrentIndex(currentIndex);
 
 }
-
+Serial* MainWindow::getSerial()
+{
+    return serial;
+}
 
 MainWindow::~MainWindow()
 {
