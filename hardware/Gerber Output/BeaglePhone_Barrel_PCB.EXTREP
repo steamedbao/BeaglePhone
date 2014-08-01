@@ -1,0 +1,27 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: BeaglePhone_Barrel_PCB.GBR   7/28/2014  12:07:09 PM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTL                Top Layer                               
+.G1                 GND1                                    
+.G2                 GND2                                    
+.GBL                Bottom Layer                            
+.GPB                Bottom Pad Master                       
+.GPT                Top Pad Master                          
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GM1                Mechanical 1                            
+.GM3                Mechanical 3                            
+.GM5                Mechanical 5                            
+.GM13               Mechanical 13                           
+.GM15               Mechanical 15                           
+.GKO                Keep-Out Layer                          
+------------------------------------------------------------------------------------------

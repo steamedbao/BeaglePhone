@@ -4,10 +4,7 @@
 class Page
 {
 public:
-    Page(int index);
-
-private:
-    unsigned index;
+    Page();
 };
 
 #endif // PAGE_H

@@ -1,6 +1,5 @@
 #include "page.h"
 
-Page::Page(int index)
+Page::Page()
 {
-    this->index = index;
 }
