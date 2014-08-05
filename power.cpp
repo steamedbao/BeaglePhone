@@ -4,7 +4,7 @@
 #include <QProcess>
 
 Power::Power(QWidget *parent) :
-    QWidget(parent),
+    Page(parent),
     ui(new Ui::Power)
 {
     ui->setupUi(this);

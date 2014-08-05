@@ -1,7 +1,7 @@
 #ifndef DIALER_H
 #define DIALER_H
 
-#include <QWidget>
+#include "page.h"
 #include "serial.h"
 #include "mainwindow.h"
 
@@ -9,20 +9,20 @@ namespace Ui {
 class Dialer;
 }
 
-class Dialer : public QWidget
+class Dialer : public Page
 {
     Q_OBJECT
 
 public:
-    explicit Dialer(QWidget *parent = 0, Serial *serial = 0);
+    explicit Dialer(QWidget *parent = 0);
+    void createConnections();
     ~Dialer();
+signals:
+    void showCall(QString);
 
 private:
     QString numberToCall;
     Ui::Dialer *ui;
-    void createConnections();
-    //void makeCall();
-    Serial *serial;
 private slots:
     void onButtonClicked();
 };

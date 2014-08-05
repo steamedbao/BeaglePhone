@@ -10,9 +10,15 @@
     </qresource>
     <qresource prefix="/icons/png/phone">
         <file>Icons/phone.png</file>
+        <file>Icons/person.png</file>
+        <file>Icons/Doge-head.png</file>
+        <file>Icons/hangup.png</file>
+        <file>Icons/activeCall.png</file>
     </qresource>
     <qresource prefix="/icons/png/message">
         <file>Icons/msg.png</file>
+        <file>Icons/new-text-message.png</file>
+        <file>Icons/inbox.png</file>
     </qresource>
     <qresource prefix="/icons/png/backspace">
         <file>Icons/backspace.png</file>
@@ -22,11 +28,7 @@
         <file>Icons/recentCalls.png</file>
     </qresource>
     <qresource prefix="/icons/TI">
-        <file>Icons/Banner.PNG</file>
-        <file>Icons/ti_hz_1c_pos_rgb_png.png</file>
-        <file>Icons/ti_hz_2c_pos_rgb_png.png</file>
         <file>Icons/stacked.png</file>
-        <file>Icons/beagle.png</file>
         <file>Icons/beagleLong.png</file>
     </qresource>
 </RCC>

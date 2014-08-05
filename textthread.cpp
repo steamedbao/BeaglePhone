@@ -2,10 +2,15 @@
 #include "ui_textthread.h"
 
 TextThread::TextThread(QWidget *parent) :
-    QWidget(parent),
+    Page(parent),
     ui(new Ui::TextThread)
 {
     ui->setupUi(this);
+    createConnections();
+}
+void TextThread::createConnections()
+{
+
 }
 
 TextThread::~TextThread()

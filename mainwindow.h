@@ -2,7 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "serial.h"
+
+
 
 namespace Ui {
 class MainWindow;
@@ -13,24 +14,33 @@ class HomePage;
 class TextThread;
 class TextHome;
 class Power;
+class Page;
+class Settings;
+class ActiveCall;
+class TextReply;
+class MyInputPanelContext;
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = 0, MyInputPanelContext *ic = 0);
     ~MainWindow();
-    Serial* getSerial();
+
 
 private:
     Ui::MainWindow *ui;
+    Page *page;
     Dialer *dialer;
     HomePage *homePage;
     TextThread *textThread;
     TextHome *textHome;
     Power *power;
-    Serial *serial;
+    Settings *settings;
+    ActiveCall *activeCall;
+    TextReply* textReply;
+
 
     int currentIndex;
     int previousIndex;
@@ -44,6 +54,14 @@ private slots:
     void goToHome();
     void goToPower();
     void goToPrevious();
+    void goToSettings();
+    void goToActiveCall();
+    void endActiveCall();
+    void goToMessageList();
+    void goToNewMessage();
+
+
+
 };
 
 #endif // MAINWINDOW_H

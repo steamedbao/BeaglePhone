@@ -1,5 +1,6 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
+#include "qdebugstream.h"
 
 #include <QWidget>
 
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::Settings *ui;
+    QDebugStream *debug;
 };
 
 #endif // SETTINGS_H

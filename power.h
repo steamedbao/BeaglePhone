@@ -1,25 +1,25 @@
 #ifndef POWER_H
 #define POWER_H
 
-#include <QWidget>
+#include "page.h"
 
 namespace Ui {
 class Power;
 }
 
-class Power : public QWidget
+class Power : public Page
 {
     Q_OBJECT
 
 public:
     explicit Power(QWidget *parent = 0);
+    void createConnections();
     ~Power();
 signals:
     void goBack();
 
 private:
     Ui::Power *ui;
-    void createConnections();
 
 private slots:
     void shutDownSys();

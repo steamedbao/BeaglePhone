@@ -14,14 +14,30 @@ public:
     ~Serial();
     bool clearToCall;
     void makeCall(const QString message);
+    void endCall();
+    void sendText(QString const number, QString const message);
+    int getSignalStrength(){return signalStrength;}
+    bool getServiceActive(){return serviceActive;}
+    bool getMute(){return mute;}
+    bool getRecieveMessages(){return recieveMessages;}
+
+    bool getSmsFull(){return smsFull;}
+signals:
+    void hangUp();
+    void incomingCall(QString);
 
 private:
     QextSerialPort *serialPort;
     QString messageString;
     QTimer *connectTimer;
+    int signalStrength;
+    bool serviceActive;
+    bool mute;
+    bool recieveMessages;
+    bool smsFull;
 private slots:
     void onDataAvailable();
-    void onConnectionTimeout();
+    void getSimStatus();
 };
 
 #endif // SERIAL_H

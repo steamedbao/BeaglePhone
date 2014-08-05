@@ -25,7 +25,14 @@ SOURCES += main.cpp\
     textthread.cpp \
     texthome.cpp \
     power.cpp \
-    serial.cpp
+    serial.cpp \
+    page.cpp \
+    settings.cpp \
+    qdebugstream.cpp \
+    activecall.cpp \
+    textreply.cpp \
+    myinputpanelcontext.cpp \
+    myinputpanel.cpp
 
 HEADERS  += mainwindow.h \
     dialer.h \
@@ -33,14 +40,25 @@ HEADERS  += mainwindow.h \
     textthread.h \
     texthome.h \
     power.h \
-    serial.h
+    serial.h \
+    page.h \
+    settings.h \
+    qdebugstream.h \
+    activecall.h \
+    textreply.h \
+    myinputpanelcontext.h \
+    myinputpanel.h
 
 FORMS    += mainwindow.ui \
     dialer.ui \
     homepage.ui \
     textthread.ui \
     texthome.ui \
-    power.ui
+    power.ui \
+    settings.ui \
+    activecall.ui \
+    textreply.ui \
+    myinputpanel.ui
 
 RESOURCES = \
     sources.qrc

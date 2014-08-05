@@ -3,9 +3,9 @@
 #include <QList>
 #include <iostream>
 
-Dialer::Dialer(QWidget *parent, Serial *serial) :
-    QWidget(parent), numberToCall(""),
-    ui(new Ui::Dialer), serial(serial)
+Dialer::Dialer(QWidget *parent) :
+    Page(parent), numberToCall(""),
+    ui(new Ui::Dialer)
 {
     ui->setupUi(this);
     createConnections();
@@ -45,7 +45,8 @@ void Dialer::onButtonClicked()
     {
        if("phoneButton" == caller->objectName())
        {
-           serial->makeCall(numberToCall);
+           serialPort->makeCall(numberToCall);
+           emit showCall(numberToCall);
            return;
        }
        else if("backSpaceButton" == caller->objectName())

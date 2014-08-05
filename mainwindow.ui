@@ -54,22 +54,14 @@
    <addaction name="actionSettings"/>
    <addaction name="separator"/>
    <addaction name="actionPower"/>
+   <addaction name="separator"/>
+   <addaction name="actionActiveCall"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionHome">
-   <property name="icon">
-    <iconset resource="sources.qrc">
-     <normaloff>:/icons/png/home/Icons/home.png</normaloff>:/icons/png/home/Icons/home.png</iconset>
-   </property>
-   <property name="text">
-    <string>Home</string>
-   </property>
-  </action>
   <action name="actionSettings">
    <property name="icon">
     <iconset resource="sources.qrc">
-     <normaloff>:/icons/png/settings/Icons/gears.png</normaloff>
-     <normalon>Icons/settingsGears.svg</normalon>:/icons/png/settings/Icons/gears.png</iconset>
+     <normaloff>:/icons/png/settings/Icons/gears.png</normaloff>:/icons/png/settings/Icons/gears.png</iconset>
    </property>
    <property name="text">
     <string>Settings</string>
@@ -82,6 +74,27 @@
    </property>
    <property name="text">
     <string>Power</string>
+   </property>
+  </action>
+  <action name="actionHome">
+   <property name="icon">
+    <iconset resource="sources.qrc">
+     <normaloff>:/icons/png/home/Icons/home.png</normaloff>:/icons/png/home/Icons/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Home</string>
+   </property>
+  </action>
+  <action name="actionActiveCall">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="sources.qrc">
+     <normaloff>:/icons/png/phone/Icons/activeCall.png</normaloff>:/icons/png/phone/Icons/activeCall.png</iconset>
+   </property>
+   <property name="text">
+    <string>activeCall</string>
    </property>
   </action>
  </widget>
