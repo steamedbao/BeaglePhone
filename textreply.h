@@ -1,13 +1,13 @@
 #ifndef TEXTREPLY_H
 #define TEXTREPLY_H
 
-#include <QWidget>
+#include "page.h"
 
 namespace Ui {
 class TextReply;
 }
 
-class TextReply : public QWidget
+class TextReply : public Page
 {
     Q_OBJECT
 

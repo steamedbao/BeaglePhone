@@ -27,6 +27,7 @@
 
  private slots:
      void sendCharacter(QChar character);
+     void sendKey(int key);
 
  private:
      void updatePosition();

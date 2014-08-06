@@ -2,10 +2,11 @@
 #include "ui_textreply.h"
 
 TextReply::TextReply(QWidget *parent) :
-    QWidget(parent),
+    Page(parent),
     ui(new Ui::TextReply)
 {
     ui->setupUi(this);
+
 }
 
 TextReply::~TextReply()

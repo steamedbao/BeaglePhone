@@ -94,7 +94,7 @@ void MyInputPanelContext::sendKey(int key)
         QTextEdit *textEdit = qobject_cast<QTextEdit *>(w);
         if(textEdit)
         {
-            textEdit->insertPlainText(" ");
+            textEdit->insertPlainText("  ");
         }
 
     }

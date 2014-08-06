@@ -16,6 +16,7 @@
 
  signals:
      void characterGenerated(QChar character);
+     void keyPressed(int key);
 
  protected:
      bool event(QEvent *e);
@@ -28,6 +29,10 @@
      Ui::MyInputPanel form;
      QWidget *lastFocusedWidget;
      QSignalMapper signalMapper;
+     bool shiftClick;
+
+     void setKeyboardCaps();
+     void setKeyboardLower();
  };
 
 

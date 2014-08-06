@@ -199,11 +199,6 @@
       <property name="text">
        <string>Del</string>
       </property>
-      <property name="buttonValue" stdset="0">
-       <char>
-        <unicode>8</unicode>
-       </char>
-      </property>
      </widget>
     </item>
     <item row="2" column="3">
